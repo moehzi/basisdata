@@ -53,10 +53,10 @@
                     <a class="nav-link page-scroll" href="#header">Basis Data <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">Task 1</a>
+                    <a class="nav-link page-scroll" href="index.html">Task 1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="task2.html">Task 2</a>
+                    <a class="nav-link page-scroll" href="#header">Task 2</a>
                 </li>
 
             </span>
@@ -72,8 +72,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1><span class="turquoise">Prinsip Kerja</span> Pemrosesan Query</h1>
-                            <p class="p-large">Query adalah kemampuan untuk menampilkan data dari database untuk diolah lebih lanjut yang biasanya diambil dari tabel tabel dalam database.</p>
+                            <h1><span class="turquoise">Apa itu </span> Evaluation Plan?</h1>
+                            <p class="p-large">Menetapkan detail evaluasi seperti apa saja yang akan dievaluasi dan bagaimana cara dalam mengevaluasi nantinya.</p>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -93,8 +93,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Query Processing</h2>
-                    <p class="p-heading p-large">Proses pengambilan data dari database dalam memenuhi permintaan pemakai</p>
+                    <h2>Menampilkan Evaluation Plan di MySQL</h2>
+                    <p class="p-heading p-large">Berikut adalah cara menampilkan evaluation plan pada DBMS yang digunakan adalah SQL</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -103,10 +103,8 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Parsing and Translation</h4>
-                            <p>Melakukan check syntax&grammar, validasi relasi yang digunakan. Mengubah query/SQL ke dalam bentuk yang bisa diolah oleh Query
-                                Processing Engine dalam bentuk aljabar relasi, struktur (tree, graph)
-                            </p>
+                            <h3 class="card-title">01.</h3>
+                            <h4>Menyiapkan Database</h4>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -114,8 +112,8 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Optimization</h4>
-                            <p>Membuat evolution plan yang optimal (dengan cost yang rendah)</p>
+                            <h3 class="card-title">02.</h3>
+                            <h4>Menentukan Perintah Query</h4>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -123,8 +121,8 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Evaluation</h4>
-                            <p>Pemilihan query-evaluation plan terbaik(cost), melakukan eksekusi terhadap query tersebut yang menghasilkan jawaban query.</p>
+                            <h4 class="card-title">03.</h4>
+                            <h3>Tambahkan "EXPLAIN"</h3>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -142,14 +140,13 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h2>Bagaiamana Cara Mengukur Biaya Queri?</h2>
-                        <p>Biaya evaluasi query dapat diukur dari banyaknya sumber daya sistem yang digunakan. Contohnya, pengaksesan disk,waktu CPU,dan waktu komunikasi
-                            Biasanya akses disk ini yang menjadi biaya utama, dan juga relatif mudah untuk diperkirakan. Oleh karena itu jumlah transfer blok dari disk digunakan sebagai ukuran biaya evaluasi yang sebenarnya.</p>    
+                        <h2>Menggunakan "EXPLAIN"</h2>
+                        <p>Di samping adalah contoh yang digunakan mengenai penggunaan "EXPLAIN"untuk evolution plan di MySQL.</p>    
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/details-1-office-worker.svg" alt="alternative">
+                        <img class="db" src="images/databasee.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -164,23 +161,58 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/details-2-office-team-work.svg" alt="alternative">
+                        <img class="img-fluid" src="images/hasil.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h3>Bagaimana Sebuah Sistem Database Mengevaluasi Ekspresi?</h3>
+                        <h3>Bagaimana Hasil dari "EXPLAIN" ?</h3>
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>Materialisasi</strong></div>
-                                <p><br> query-query akan dipisahkan/dibagi dulu menjadi query individual. Kemudian, akan dievaluasi querynya dan disimpan di tabel sementara pada memori. Data dari tabel sementara ini, akan digunakan untuk mengevaluasi query selanjutnya.</p>
+                                <div class="media-body"><strong>id</strong></div>
+                                <p><br> Kolom ini berisi identifier dari select, untuk contoh ini idnya 1</p>
                             </li>
                             <li class="media">
                                 <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>Pipeline</strong></div>
-                                <p><br>Sebuah query akan dievaluasi terlebih dahulu kemudain hasilnya akan digunakan untuk query berikutnya dan begitu seterusnya
-                                dimana hasil query sebelumnya dilanjutkan ke query berikutnya.</p>
+                                <div class="media-body"><strong>select_type</strong></div>
+                                <p><br>Pada contoh ini, isinya yaitu simple. Ini berarti bahwa tipe select yang digunakan keduanya adalah tipe select sederhana bukan gabungan select.</p>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong>type</strong></div>
+                                <p><br>Kolom type berisi all, yang artinya pemindaian tabel lengkap dilakukan untuk setiap kombinasi baris dari tabel sedangkan pada tabel karyawan memiliki
+                                type eq_ref</p>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong>POSSIBLE_KEYS</strong></div>
+                                <p><br>Di kolom ini,terdapat primary key pada tabel karyawan.</p>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong>key</strong></div>
+                                <p><br>Menjelaskan indeks sebenarnya yang digunakan MySQL untuk mencari</p>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong>key_len</strong></div>
+                                <p><br>Menunjukkan panjang kunci yang digunakan MySQL, di gambar atas menjelaskan bahwa bagian PRIMARY memiliki 42 byte.</p>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong>ref</strong></div>
+                                <p><br>Kolom yang dibandingkan dengan indeks yang diberi nama di kolom kunci</p>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong>rows</strong></div>
+                                <p><br>Menunjukkan berapa data yang diambil dalam tabel, tergantung dengan query apa yang dipakai</p>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong>Extra</strong></div>
+                                <p><br>Menunjukkan informasi tambahan tentang query processing.Dalam tabel gaji terdapat Using Where yang artinya untuk meksekusi tabel tersebut menggunakan where.</p>
                             </li>
                         </ul>
                     </div> <!-- end of text-container -->
