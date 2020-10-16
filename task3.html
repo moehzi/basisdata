@@ -56,10 +56,10 @@
                     <a class="nav-link page-scroll" href="index.html">Task 1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">Task 2</a>
+                    <a class="nav-link page-scroll" href="task2.html">Task 2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="task3.html">Task 3</a>
+                    <a class="nav-link page-scroll" href="#header">Task 3</a>
                 </li>
 
             </span>
@@ -75,8 +75,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1><span class="turquoise">Apa itu </span> Evaluation Plan?</h1>
-                            <p class="p-large">Menetapkan detail evaluasi seperti apa saja yang akan dievaluasi dan bagaimana cara dalam mengevaluasi nantinya.</p>
+                            <h1><span class="turquoise">Apa itu </span> Proses Desain Database?</h1>
+                            <p class="p-large">Berisi proses untuk bagaimana mengolah data, agar data-data yang ada bisa lebih teratur, mudah diolah dan dapat dimengerti.</p>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -96,8 +96,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Menampilkan Evaluation Plan di MySQL</h2>
-                    <p class="p-heading p-large">Berikut adalah cara menampilkan evaluation plan pada DBMS yang digunakan adalah SQL</p>
+                    <h2>Apa yang harus diperhatikan dalam desain database?</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -107,7 +106,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h3 class="card-title">01.</h3>
-                            <h4>Menyiapkan Database</h4>
+                            <h4> Redudansi dan Inkonsistensi data</h4>
+                            <p>Penyimpanan data dibeberapa tempat yang berbeda disebut redudansi, hal ini akan menyebabkan pemborosan dan menimbulkan inkonsistensi data (data tidak konsisten) apabila terjadi perubahan data dibeberapa tempat.</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -116,7 +116,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h3 class="card-title">02.</h3>
-                            <h4>Menentukan Perintah Query</h4>
+                            <h4>Pengaksesan Data</h4>
+                            <p>Data di dalam database harus siap diakses oleh siapa saja yang membutuhkan dan mempunyai hak untuk mengaksesnya. Oleh karena itu perlu dibuat suatu program pengelolaan atau suatu aplikasi untuk mengakases data yang dikenal sebagai database management system (DBMS).</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -125,7 +126,26 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">03.</h4>
-                            <h3>Tambahkan "EXPLAIN"</h3>
+                            <h3>Data terisolasi untuk standarisasi</h3>
+                            <p>Jika data tersebar dalam beberapa tabel dalam format yang sama, maka akan menyulitkan dalam menulis program aplikasi, baik untuk mengambil dan menyimpan data. Oleh karena itu data dalam satu database harus dibuat satu format yang sama, sehingga mudah dibuat program aplikasinya.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">04.</h4>
+                            <h3>Masalah keamanan</h3>
+                            <p>Setiap pemakai sistem database tidak semua bagian mengakses semua data, misalnya, misalnya data mengenai gaji pegawai hanya boleh dibuka oleh bagian keuangan, sedangkan bagian gudang dan bagian lain tidak diperkenankan untuk membukanya. Keamanan dapat diatur dan disesuaikan baik tingkat database atau aplikainya.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">05.</h4>
+                            <h3>Multiple User</h3>
+                            <p>Salah satu database dibangun karena nantinya data tersebut akan digunakan oleh banyak pengguna (user), baik dalam waktu berbeda maupun bersamaan. Oleh karena itu diperlukan database yang handal dan dapat mendukung banyak pengguna (multiuser).</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -137,93 +157,83 @@
     <!-- end of services -->
 
 
-    <!-- Details 1 -->
-    <div class="basic-1">
+     <!-- Services -->
+     <div id="services" class="cards-1">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2>Menggunakan "EXPLAIN"</h2>
-                        <p>Di samping adalah contoh yang digunakan mengenai penggunaan "EXPLAIN"untuk evolution plan di MySQL.</p>    
-                    </div> <!-- end of text-container -->
+                <div class="col-lg-12">
+                    <h2>Bagaimana langkah-langkah proses desain database?</h2>
                 </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="db" src="images/databasee.png" alt="alternative">
-                    </div> <!-- end of image-container -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">01.</h3>
+                            <h4>Pengumpulan dan Analisis Kebutuhan</h4>
+                            <p>Merupakan suatu tahap dimana kita melakukan proses indentifikasi dan analisa kebutuhan-kebutuhan data dan ini disebut pengumpulan data dan analisa. Untuk menentukan kebutuhan-kebutuhan suatu sistem database, kita harus mengenal terlebih dahulu bagian-bagian lain dari sistem informasi yang akan berinteraksi dengan sistem database, termasuk para user yang ada dan para useryang baru beserta aplikasi-aplikasinya.</p> 
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">02.</h3>
+                            <h4>Perancangan Database secara Konseptual</h4>
+                            <p>Pada tahap ini akan dihasilkan conceptual schema untuk database yang tergantung pada sebuah DBMS yang spesifik. Sering menggunakan sebuah high-level data modelseperti ER/EER modelselama tahap ini. Dalam conceptual schema, kita harus merinci aplikasi-aplikasi databaseyang diketahui dan transaksi-transaksi yang mungkin.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">03.</h4>
+                            <h3>Pemilihan DBMS</h3>
+                            <p>Pemilihan databaseditentukan oleh beberapa faktor diantaranya faktor teknik, ekonomi, dan politik organisasi.Contoh faktor teknik:
+                                Keberadaan DBMS dalam menjalankan tugasnya seperti jenis-jenis DBMS (relational, network, hierarchical, dan lain-lain), struktur penyimpanan, dan jalur akses yang mendukung DBMS, pemakai, dan lain-lain</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">04.</h4>
+                            <h3>Perancangan Database secara Logika</h3>
+                            <p>Tahap selanjutnya adalah membuat sebuah skema konseptual dan skema eksternal pada model data dari DBMS yang terpilih. Tahap ini dilakukan oleh pemetaan skema konseptual dan skema eksternal yang dihasilkan pada tahap 2. Pada tahap ini, skema konseptual ditransformasikan dari model data tingkat tinggi yang digunakan pada tahap 2 ke dalam model data dari model data dari DBMS yang dipilih pada tahap 3.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">05.</h4>
+                            <h3>Perancangan Database secara Fisik</h3>
+                            <p>Salah satu database dibangun karena nantinya data tersebut akan digunakan oleh banyak pengguna (user), baik dalam waktu berbeda maupun bersamaan. Oleh karena itu diperlukan database yang handal dan dapat mendukung banyak pengguna (multiuser).</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">06.</h4>
+                            <h3>Implementasi Sistem Database</h3>
+                            <p>Setelah perancangan secara logika dan secara fisik lengkap, kita dapat melaksanakan sistem database. Perintah-perintah dalam DDL dan SDL(Storage Definition Language) dari DBMS yang dipilih, dihimpun dan digunakan untuk membuat skema database dan file-file database (yang kosong). Sekarang databasetersebut dimuat (disatukan) dengan datanya.Jika data harus dirubah dari sistem komputer sebelumnya, perubahan-perubahan yang rutin mungkin diperlukan untuk format ulang datanya yang kemudian dimasukkan ke database yang baru. Transaksi-transaksi database sekarang harus dilaksanakan oleh para programmmer aplikasi.Spesifikasi secara konseptual diuji dan dihubungkan dengan kode program dengan perintah-perintah dari embedded DML yang telah ditulis dan diuji. Suatu saat transaksi-transaksi tersebut telah siap dan data telah dimasukkan ke dalam database, maka tahap perancangan dan implementasi telah selesai, dan kemudian tahap operasional dari sistem database dimulai.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of details 1 -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of services -->
 
     
-    <!-- Details 2 -->
-    <div class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/hasil.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h3>Bagaimana Hasil dari "EXPLAIN" ?</h3>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>id</strong></div>
-                                <p><br> Kolom ini berisi identifier dari select, untuk contoh ini idnya 1</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>select_type</strong></div>
-                                <p><br>Pada contoh ini, isinya yaitu simple. Ini berarti bahwa tipe select yang digunakan keduanya adalah tipe select sederhana bukan gabungan select.</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>type</strong></div>
-                                <p><br>Kolom type berisi all, yang artinya pemindaian tabel lengkap dilakukan untuk setiap kombinasi baris dari tabel sedangkan pada tabel karyawan memiliki
-                                type eq_ref</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>POSSIBLE_KEYS</strong></div>
-                                <p><br>Di kolom ini,terdapat primary key pada tabel karyawan.</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>key</strong></div>
-                                <p><br>Menjelaskan indeks sebenarnya yang digunakan MySQL untuk mencari</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>key_len</strong></div>
-                                <p><br>Menunjukkan panjang kunci yang digunakan MySQL, di gambar atas menjelaskan bahwa bagian PRIMARY memiliki 42 byte.</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>ref</strong></div>
-                                <p><br>Kolom yang dibandingkan dengan indeks yang diberi nama di kolom kunci</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>rows</strong></div>
-                                <p><br>Menunjukkan berapa data yang diambil dalam tabel, tergantung dengan query apa yang dipakai</p>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong>Extra</strong></div>
-                                <p><br>Menunjukkan informasi tambahan tentang query processing.Dalam tabel gaji terdapat Using Where yang artinya untuk meksekusi tabel tersebut menggunakan where.</p>
-                            </li>
-                        </ul>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of details 2 -->
+    
 
     <!-- About -->
     <div id="about" class="basic-4">
